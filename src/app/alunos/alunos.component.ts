@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AlunosComponent {
 
-  titulo = 'Alunos';
+  public titulo = 'Alunos';
 
   public alunos = [
-    { nome: 'Lucas' },
-    { nome:'João'},
-    { nome:'Marcos'},
-    { nome:'André'},
-    { nome:'Vitor'},
-    { nome:'Laís'},
-    { nome:'Laura'},
+    { nome: 'Lucas', sobrenome: '', telefone: '', },
+    { nome: 'João', sobrenome: '', telefone: '', },
+    { nome: 'Marcos', sobrenome: '', telefone: '', },
+    { nome: 'André', sobrenome: '', telefone: '', },
+    { nome: 'Vitor', sobrenome: '', telefone: '', },
+    { nome: 'Laís', sobrenome: '', telefone: '', },
+    { nome: 'Laura', sobrenome: '', telefone: '', },
   ];
 }

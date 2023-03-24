@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
-
+  public titulo = 'Perfil';
 }
