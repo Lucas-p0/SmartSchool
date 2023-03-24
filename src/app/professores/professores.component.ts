@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ProfessoresComponent {
 
+  titulo = 'Professores';
+
+  public professores = [
+    { nome: 'Lucas' },
+    { nome: 'João' },
+    { nome: 'Marcos' },
+    { nome: 'André' },
+    { nome: 'Vitor' },
+    { nome: 'Laís' },
+    { nome: 'Laura' },
+  ];
 }
