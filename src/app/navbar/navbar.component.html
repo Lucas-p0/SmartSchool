@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+    <div class="container container-fluid">
+
         <a class="navbar-brand" routerLink="dashboard">SmartSchool</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,39 +8,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link " routerLink="dashboard" routerLinkActive="active">Principal</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link " routerLink="professores" routerLinkActive="active">Professores</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " routerLink="alunos" routerLinkActive="active">Alunos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="perfil" routerLinkActive="active">Perfil</a>
-                </li>
+
             </ul>
 
             <ul class="navbar-nav" dropdown>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="button-basic" dropdownToggle routerLink="" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        Usuário
                     </a>
                     <ul class="dropdown-menu" id="dropdown-basic" *dropdownMenu class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="dashboard">Principal</a></li>
-                        <li><a class="dropdown-item" routerLink="professores">Professores</a></li>
-                        <li><a class="dropdown-item" routerLink="alunos">Alunos</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" routerLink="#">Cadastro</a></li>
+                        <li><a class="dropdown-item" routerLink="perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" routerLink="">Sair</a></li>
                     </ul>
                 </li>
-            </ul>          
-
-
+            </ul>
         </div>
     </div>
 </nav>
