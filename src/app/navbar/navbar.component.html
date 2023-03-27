@@ -21,22 +21,23 @@
                 </li>
             </ul>
 
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" dropdown>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="button-basic" dropdownToggle routerLink="" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="">Action</a></li>
-                        <li><a class="dropdown-item" routerLink="">Another action</a></li>
+                    <ul class="dropdown-menu" id="dropdown-basic" *dropdownMenu class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="dashboard">Principal</a></li>
+                        <li><a class="dropdown-item" routerLink="professores">Professores</a></li>
+                        <li><a class="dropdown-item" routerLink="alunos">Alunos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" routerLink="">Something else here</a></li>
+                        <li><a class="dropdown-item" routerLink="#">Cadastro</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul>          
 
 
         </div>
