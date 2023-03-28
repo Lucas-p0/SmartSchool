@@ -1,7 +1,7 @@
 <app-titulo [titulo]="titulo"></app-titulo>
 
 
-<table class="table">
+<table class="table table-hover">
     <thead class="table-dark">
         <tr>
             <th scope="col">Id</th>
@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let professor of professores">
+        <tr *ngFor="let professor of professores" style="cursor: pointer">
             <th scope="row">{{professor.id}}</th>
             <td>{{professor.nome}}</td>
             <td>{{professor.disciplina}}</td>
