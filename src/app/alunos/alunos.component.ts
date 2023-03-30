@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-alunos',
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
-export class AlunosComponent {
+export class AlunosComponent implements OnInit {
 
   public titulo = 'Alunos';
+  
+  public alunoSelecionado: string | undefined;
 
   public alunos = [
     { id: 1, nome: 'Lucas', sobrenome: 'Pinheiro', telefone: '10', },
@@ -18,4 +20,13 @@ export class AlunosComponent {
     { id: 6, nome: 'Laís', sobrenome: 'Lotério', telefone: '60', },
     { id: 7, nome: 'Laura', sobrenome: 'Cardoso', telefone: '70', },
   ];
+  alunoSelect(aluno: any) {
+    this.alunoSelecionado = aluno.nome;
+  }
+  voltar() {
+    this.alunoSelecionado = '';
+  }
+
+  constructor() { }
+  ngOnInit() { }
 }
