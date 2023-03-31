@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ProfessoresComponent {
 
   public titulo = 'Professores';
+  public professorSelecionado: string | undefined;
 
   public professores = [
     { id: 1, nome: 'Lucas', disciplina: 'Matemática' },
@@ -18,4 +19,10 @@ export class ProfessoresComponent {
     { id: 6, nome: 'Laís', disciplina: 'Espanhol' },
     { id: 7, nome: 'Laura', disciplina: 'Filosofia' },
   ];
+  professorSelect(professor: any) {
+    this.professorSelecionado = professor.nome;
+  }
+  voltar() {
+    this.professorSelecionado = '';
+  }
 }

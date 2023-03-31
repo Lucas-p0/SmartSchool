@@ -1,13 +1,19 @@
+<!-- HTML para a exibição dos alunos e do aluno selecionado -->
 <div *ngIf="alunoSelecionado">
-    <app-titulo [titulo]="'Aluno:'+ alunoSelecionado"></app-titulo>
-    aluno selecionado: {{alunoSelecionado}}
+    <!-- Exibe o título da página com o nome do aluno selecionado -->
+    <app-titulo [titulo]="'Aluno: ' + alunoSelecionado"></app-titulo>
+    <!-- Exibe o nome do aluno selecionado -->
+    Aluno selecionado: {{ alunoSelecionado }}
+    <!-- Botão para voltar à lista de alunos -->
+    <button class="btn btn-outline-secondary" (click)="voltar()">Voltar</button>
 </div>
 
-<button class="btn btn-outline-secondary" (click)="voltar()">Voltar</button>
-
+<!-- HTML para a exibição da lista de alunos -->
 <br>
 <div *ngIf="!alunoSelecionado">
+    <!-- Exibe o título padrão da página -->
     <app-titulo [titulo]="titulo"></app-titulo>
+    <!-- Tabela com a lista de alunos -->
     <table class="table table-hover">
         <thead class="table-dark">
             <tr>
