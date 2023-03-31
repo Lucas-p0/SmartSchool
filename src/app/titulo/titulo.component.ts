@@ -5,9 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './titulo.component.html',
   styleUrls: ['./titulo.component.css']
 })
-export class TituloComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+export class TituloComponent {
+
   @Input() titulo: string | undefined;
 }
