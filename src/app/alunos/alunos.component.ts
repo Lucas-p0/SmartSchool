@@ -33,7 +33,7 @@ export class AlunosComponent {
 
   // Define uma função que é chamada quando o botão "Voltar" é clicado
   voltar() {
-    this.alunoSelecionado = undefined;
+    this.alunoSelecionado = '';
   }
 
   // Define o construtor do componente

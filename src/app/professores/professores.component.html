@@ -1,5 +1,7 @@
-<app-titulo [titulo]="titulo"></app-titulo>
-<div *ngIf="professorSelecionado"></div>
+<div *ngIf="professorSelecionado">
+    <app-titulo [titulo]="'Professor:' + professorSelecionado"></app-titulo>
+    <button class="btn btn-outline-secondary" (click)="voltar()">Voltar</button>
+</div>
 
 <div *ngIf="!professorSelecionado">
     <app-titulo [titulo]="titulo"></app-titulo>
