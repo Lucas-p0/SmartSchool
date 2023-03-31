@@ -5,10 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
-export class AlunosComponent implements OnInit {
+export class AlunosComponent{
 
   public titulo = 'Alunos';
-  
+
   public alunoSelecionado: string | undefined;
 
   public alunos = [

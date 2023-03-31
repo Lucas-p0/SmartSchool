@@ -1,12 +1,13 @@
-<app-titulo [titulo]="titulo"></app-titulo>
-
-
 <div *ngIf="alunoSelecionado">
+    <app-titulo [titulo]="'Aluno:'+ alunoSelecionado"></app-titulo>
     aluno selecionado: {{alunoSelecionado}}
 </div>
+
+<button class="btn btn-outline-secondary" (click)="voltar()">Voltar</button>
+
 <br>
-<button class="btn btn-default" (click)="voltar()">Voltar</button>
 <div *ngIf="!alunoSelecionado">
+    <app-titulo [titulo]="titulo"></app-titulo>
     <table class="table table-hover">
         <thead class="table-dark">
             <tr>
