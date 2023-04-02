@@ -1,12 +1,31 @@
 <!-- HTML para a exibição dos alunos e do aluno selecionado -->
 
 <div *ngIf="alunoSelecionado">
-    <!-- Exibe o título da página com o nome do aluno selecionado -->
-    <app-titulo [titulo]="'Aluno: ' + alunoSelecionado"></app-titulo>
+    <div class="d-flex">
+        <div class="me-auto">
+            <!-- Exibe o título da página com o nome do aluno selecionado -->
+            <app-titulo [titulo]="'Aluno: ' + alunoSelecionado"></app-titulo>
+        </div>
+        <div class="mt-2 float-end">
+            <!-- Botão para voltar à lista de alunos -->
+            <button class="btn btn-warning" (click)="voltar()">Lista de alunos</button>
+        </div>
+    </div>
 
-
-    <!-- Botão para voltar à lista de alunos -->
-    <button class="btn btn-outline-secondary" (click)="voltar()">Voltar</button>
+    <form>
+        <div class="form-group ">
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="form-label">Telefone</label>
+            <input type="tel" class="form-control">
+        </div>
+    </form>
 </div>
 
 <!-- HTML para a exibição da lista de alunos -->
