@@ -4,7 +4,7 @@
     <div class="d-flex">
         <div class="me-auto">
             <!-- Exibe o título da página com o nome do professor selecionado -->
-            <app-titulo [titulo]="'Professor: ' + professorSelecionado"></app-titulo>
+            <app-titulo [titulo]="'Professor: ' + professorSelecionado.id"></app-titulo>
         </div>
         <div class="mt-2 float-end">
             <!-- Botão para voltar à lista de professores -->
@@ -15,13 +15,13 @@
     <form>
         <div class="form-group ">
             <label for="exampleFormControlInput1" class="form-label">Nome</label>
-            <input type="text" class="form-control">
+            <input type="text" value="{{professorSelecionado.nome}}" class="form-control">
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1" class="form-label">Disciplina</label>
-            <input type="text" class="form-control">
+            <input type="text" value="{{professorSelecionado.disciplina}}" class="form-control">
         </div>
-        
+
     </form>
 </div>
 
@@ -37,7 +37,6 @@
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Sobrenome</th>
-                <th scope="col">Telefone</th>
             </tr>
         </thead>
         <tbody>
