@@ -1,5 +1,6 @@
 // Importa as dependências necessárias do Angular
 import { Component, OnInit } from '@angular/core';
+import { Aluno } from '../models/Aluno';
 
 // Define as propriedades do componente
 @Component({
@@ -27,7 +28,7 @@ export class AlunosComponent {
   ];
 
   // Define uma função que é chamada quando um aluno é selecionado
-  alunoSelect(aluno: any) {
+  alunoSelect(aluno: Aluno) {
     this.alunoSelecionado = aluno.nome;
   }
 
