@@ -1,5 +1,6 @@
 // Importa as dependências necessárias do Angular
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Aluno } from '../models/Aluno';
 
 // Define as propriedades do componente
@@ -10,12 +11,11 @@ import { Aluno } from '../models/Aluno';
 })
 
 // Define a classe do componente
-export class AlunosComponent {
+export class AlunosComponent implements OnInit {
 
   public titulo = 'Alunos'; // Define o título do componente
-
+  public alunoForm: FormGroup | undefined;
   public alunoSelecionado: Aluno | undefined; // Define uma variável para armazenar o nome do aluno selecionado
-
   public textSimpless: string | undefined; // Define uma variável
 
   // Define uma lista de alunos
@@ -28,6 +28,18 @@ export class AlunosComponent {
     { id: 6, nome: 'Laís', sobrenome: 'Lotério', telefone: 60, },
     { id: 7, nome: 'Laura', sobrenome: 'Cardoso', telefone: 70, },
   ];
+
+  constructor(private fb: FormBuilder) {
+    this.criarForm();
+  }
+  ngOnInit(): void {
+
+  }
+  criarForm() {
+    this.alunoForm = this.fb.group({
+      id: [],
+    });
+  }
 
   // Define uma função que é chamada quando um aluno é selecionado
   alunoSelect(aluno: Aluno) {
