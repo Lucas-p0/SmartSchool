@@ -1,50 +1,58 @@
 <!-- HTML para a exibição dos professors e do professor selecionado -->
+<div class="row">
+    <div class="col-sm-6" *ngIf="professorSelecionado">
+        <div class="d-flex">
+            <div class="me-auto">
+                <!-- Exibe o título da página com o nome do professor selecionado -->
+                <app-titulo [titulo]="'Professor: ' + professorSelecionado.id   "></app-titulo>
+            </div>
+            
+        </div>
 
-<div *ngIf="professorSelecionado">
-    <div class="d-flex">
-        <div class="me-auto">
-            <!-- Exibe o título da página com o nome do professor selecionado -->
-            <app-titulo [titulo]="'Professor: ' + professorSelecionado.id"></app-titulo>
-        </div>
-        <div class="mt-2 float-end">
-            <!-- Botão para voltar à lista de professores -->
-            <button class="btn btn-warning" (click)="voltar()">Lista de professores</button>
-        </div>
+        <form>
+            <div class="form-group ">
+                <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                <input type="text" value="{{professorSelecionado.nome}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1" class="form-label">Disciplina</label>
+                <input type="text" value="{{professorSelecionado.disciplina}}" class="form-control">
+            </div>
+            <hr class="my-4">
+            <div class="d-flex">                
+                <div class="me-auto  form-group">                    
+                    <button class="btn btn-success">Enviar</button>
+                </div>
+                <div class="form-group  float-end">                    
+                    <!-- Botão para voltar à lista de alunos -->
+                    <button class="btn btn-outline-danger" (click)="voltar()">Fechar</button>
+                </div>                
+            </div>
+
+        </form>
     </div>
 
-    <form>
-        <div class="form-group ">
-            <label for="exampleFormControlInput1" class="form-label">Nome</label>
-            <input type="text" value="{{professorSelecionado.nome}}" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1" class="form-label">Disciplina</label>
-            <input type="text" value="{{professorSelecionado.disciplina}}" class="form-control">
-        </div>
-
-    </form>
-</div>
-
-<!-- HTML para a exibição da lista de professores -->
-<br>
-<div *ngIf="!professorSelecionado">
-    <!-- Exibe o título padrão da página -->
-    <app-titulo [titulo]="titulo"></app-titulo>
-    <!-- Tabela com a lista de professores -->
-    <table class="table table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Sobrenome</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor=" let professor of professores" style="cursor: pointer" (click)="professorSelect(professor)">
-                <th scope="row">{{professor.id}}</th>
-                <td>{{professor.nome}}</td>
-                <td>{{professor.disciplina}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- HTML para a exibição da lista de professores -->
+    <br>
+    <div [ngClass]="{'col-sm-6':professorSelecionado, 'col-sm-12':!professorSelecionado}">
+        <!-- Exibe o título padrão da página -->
+        <app-titulo [titulo]="titulo"></app-titulo>
+        <!-- Tabela com a lista de professores -->
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor=" let professor of professores" style="cursor: pointer" (click)="professorSelect(professor)">
+                    <th scope="row">{{professor.id}}</th>
+                    <td>{{professor.nome}}</td>
+                    <td>{{professor.disciplina}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
