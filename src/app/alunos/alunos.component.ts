@@ -16,6 +16,8 @@ export class AlunosComponent {
 
   public alunoSelecionado: Aluno | undefined; // Define uma variável para armazenar o nome do aluno selecionado
 
+  public textSimpless: string | undefined; // Define uma variável
+
   // Define uma lista de alunos
   public alunos = [
     { id: 1, nome: 'Lucas', sobrenome: 'Pinheiro', telefone: 10, },

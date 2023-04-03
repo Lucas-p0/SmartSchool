@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Professor } from '../models/Professor';
 
 
@@ -7,8 +8,9 @@ import { Professor } from '../models/Professor';
   templateUrl: './professores.component.html',
   styleUrls: ['./professores.component.css']
 })
-export class ProfessoresComponent {
+export class ProfessoresComponent implements OnInit {
 
+  public alunoForm: FormGroup | undefined;
   public titulo = 'Professores';
   public professorSelecionado: Professor | undefined;
 
@@ -21,7 +23,11 @@ export class ProfessoresComponent {
     { id: 6, nome: 'Laís', disciplina: 'Espanhol' },
     { id: 7, nome: 'Laura', disciplina: 'Filosofia' },
   ];
-  professorSelect(professor: Professor) {
+  constructor() { }
+  ngOnInit(): void {
+
+  }
+  professorSelect(professor: Professor): void {
     this.professorSelecionado = professor;
   }
   voltar() {
