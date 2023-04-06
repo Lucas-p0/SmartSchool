@@ -1,0 +1,13 @@
+<p>calendario works!</p>
+
+<div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+        <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker >
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+        <input type="text" placeholder="Daterangepicker" class="form-control" bsDaterangepicker
+            >
+    </div>
+</div>
+<button (click)="toggleWeekends()">toggle weekends</button>
+<full-calendar class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" [options]="calendarOptions"></full-calendar>

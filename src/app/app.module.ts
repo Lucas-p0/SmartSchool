@@ -12,6 +12,8 @@ import { TituloComponent } from './titulo/titulo.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PerfilComponent,
     DashboardComponent,
     NavbarComponent,
-    TituloComponent
+    TituloComponent,
+    CalendarioComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    FullCalendarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
