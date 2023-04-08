@@ -1,6 +1,6 @@
 <div class="row">
     <!-- HTML para a exibição dos alunos e do aluno selecionado -->
-    
+
     <div class="col-sm-6" *ngIf="alunoSelecionado">
         <div class="d-flex">
             <div class="me-auto">
@@ -10,7 +10,7 @@
 
         </div>
 
-        <form>
+        <form [formGroup]="alunoForm" (submit)="alunoSubmit">
             <div class="form-group ">
                 <label for="exampleFormControlInput1" class="form-label">Nome</label>
                 <input type="text" value="{{alunoSelecionado.nome}}" class="form-control">

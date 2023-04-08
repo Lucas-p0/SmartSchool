@@ -14,7 +14,7 @@ import { Aluno } from '../models/Aluno';
 export class AlunosComponent implements OnInit {
 
   public titulo = 'Alunos'; // Define o título do componente
-  public alunoForm: FormGroup | undefined;
+  public alunoForm!: FormGroup;
   public alunoSelecionado: Aluno | undefined; // Define uma variável para armazenar o nome do aluno selecionado
   public textSimpless: string | undefined; // Define uma variável
 
@@ -38,7 +38,12 @@ export class AlunosComponent implements OnInit {
   criarForm() {
     this.alunoForm = this.fb.group({
       id: [],
+      nome: [],
+      sobrenome: [],
     });
+  }
+  alunoSubmit() {
+    console.log(this.alunoForm.value);
   }
 
   // Define uma função que é chamada quando um aluno é selecionado
